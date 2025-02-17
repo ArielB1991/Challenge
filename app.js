@@ -9,7 +9,9 @@ function agregarAmigo() {
 
     listaAmigos.push(nombre);
     actualizarLista();
+    verificarBoton()
     borrarCampo(ingreso);
+    
 }
 
 function validarNombre(nombre) {
@@ -50,5 +52,12 @@ function sortearAmigo() {
     let aleatorio = Math.floor(Math.random() * listaAmigos.length);
     let ganador = listaAmigos[aleatorio];
 
-    sortear.innerText = `El ganador es: ${ganador}`;
+    sortear.innerText = `El amigo secreto es: ${ganador}`;
+}
+
+function verificarBoton(){
+    const boton = document.getElementById("sortearBtn");
+    if(boton){
+        boton.disabled = listaAmigos.length < 2;
+    }
 }
