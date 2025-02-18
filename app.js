@@ -75,5 +75,6 @@ function sortearAmigo() {
 //Función para verificar si se puede sortear
 function verificarBoton() {
     const boton = document.getElementById('sortearBtn');
-    boton.disabled = listaAmigos.length < 2; // Habilita o deshabilita el botón según la cantidad de amigos
+    // Habilita o deshabilita el botón según la cantidad de amigos
+    boton.disabled = listaAmigos.length < 2; 
 }
