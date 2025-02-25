@@ -78,3 +78,11 @@ function verificarBoton() {
     // Habilita o deshabilita el botón según la cantidad de amigos
     boton.disabled = listaAmigos.length < 2; 
 }
+
+function reiniciarJuego() {
+    listaAmigos = [];
+    actualizarLista();
+    verificarBoton();
+    document.getElementById('resultado').innerText = "";
+    borrarCampo(ingreso)
+}
